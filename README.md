@@ -1,2 +1,7 @@
+<div align="center">
 
-![snake](https://raw.githubusercontent.com/Garden0728/Garden0728/output/github-snake-dark.svg)
+<img src="assets/banner.svg" width="100%" alt="Jurassic Garden"/>
+
+<img src="assets/dino-garden.svg" width="100%" alt="Dinosaurs on my contribution graph"/>
+
+</div>

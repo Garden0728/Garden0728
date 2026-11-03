@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1030"/>
+      <stop offset=".55" stop-color="#5a2a3a"/>
+      <stop offset="1" stop-color="#e0763a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a3"/>
+      <stop offset=".5" stop-color="#f2b134"/>
+      <stop offset="1" stop-color="#b8661c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset=".6" stop-color="#ff9a4a" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#ff9a4a" stop-opacity="0"/>
+    </radialGradient>
+    <g id="palm">
+      <path d="M0 0 q6 -40 16 -80" stroke="currentColor" stroke-width="6" fill="none"/>
+      <g stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round">
+        <path d="M16 -80 q-20 -18 -46 8"/><path d="M16 -80 q-14 -6 -34 24"/>
+        <path d="M16 -80 q22 -18 48 8"/><path d="M16 -80 q16 -6 34 24"/>
+        <path d="M16 -80 q2 -16 -4 -28"/>
+      </g>
+    </g>
+    <g id="brachio">
+      <path d="M-50 -8 Q-110 0 -150 24 Q-100 4 -48 10 Z" fill="currentColor"/>
+      <ellipse cx="0" cy="0" rx="58" ry="32" fill="currentColor"/>
+      <path d="M30 -18 Q60 -60 78 -118" stroke="currentColor" stroke-width="20" fill="none" stroke-linecap="round"/>
+      <ellipse cx="90" cy="-122" rx="16" ry="9" fill="currentColor"/>
+      <g fill="currentColor">
+        <rect x="-44" y="14" width="15" height="48" rx="5"><animateTransform attributeName="transform" type="rotate" values="-8 -36 14;8 -36 14;-8 -36 14" dur="2s" repeatCount="indefinite"/></rect>
+        <rect x="-22" y="14" width="15" height="48" rx="5"><animateTransform attributeName="transform" type="rotate" values="8 -14 14;-8 -14 14;8 -14 14" dur="2s" repeatCount="indefinite"/></rect>
+        <rect x="18" y="12" width="15" height="50" rx="5"><animateTransform attributeName="transform" type="rotate" values="8 26 12;-8 26 12;8 26 12" dur="2s" repeatCount="indefinite"/></rect>
+        <rect x="38" y="10" width="15" height="52" rx="5"><animateTransform attributeName="transform" type="rotate" values="-8 46 10;8 46 10;-8 46 10" dur="2s" repeatCount="indefinite"/></rect>
+      </g>
+    </g>
+  </defs>
+
+  <rect width="900" height="280" rx="14" fill="url(#sky)"/>
+  <circle cx="620" cy="205" r="90" fill="url(#sun)"/>
+  <circle cx="620" cy="205" r="34" fill="#ffcf7a" opacity=".9"/>
+
+  <!-- 멀리 있는 산과 화산 -->
+  <path d="M0 210 L80 150 L150 190 L240 120 L330 185 L420 140 L520 200 L600 160 L700 205 L790 130 L900 190 L900 280 L0 280 Z" fill="#3b1f33"/>
+  <path d="M720 205 L775 132 L800 132 L860 205 Z" fill="#2c1828"/>
+  <path d="M775 132 L800 132 L793 142 L787 136 L781 144 Z" fill="#ff7a2e"/>
+  <g fill="#6b5a6e">
+    <circle cx="788" cy="124" r="6"><animate attributeName="cy" values="124;70" dur="5s" repeatCount="indefinite"/><animate attributeName="r" values="5;18" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="790" cy="124" r="6"><animate attributeName="cy" values="124;70" dur="5s" begin="2.5s" repeatCount="indefinite"/><animate attributeName="r" values="5;18" dur="5s" begin="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="5s" begin="2.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- 익룡 -->
+  <g fill="#2a1424">
+    <path d="M0 0 q12 -10 24 0 q12 -10 24 0 q-12 -4 -24 4 q-12 -8 -24 -4 Z">
+      <animateTransform attributeName="transform" type="scale" values="1 1;1 -.4;1 1" dur=".8s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    <animateMotion path="M-60 70 Q300 30 520 80 T980 50" dur="18s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 앞쪽 정글 -->
+  <path d="M0 236 Q60 216 120 232 T240 228 T360 236 T480 226 T600 236 T720 228 T840 234 T900 230 L900 280 L0 280 Z" fill="#132a1c"/>
+  <g color="#0e2016">
+    <use href="#palm" x="40" y="250"/>
+    <use href="#palm" x="110" y="262" transform="scale(1)"/>
+    <use href="#palm" x="800" y="256"/>
+    <use href="#palm" x="850" y="266"/>
+  </g>
+  <!-- 걸어가는 브라키오사우루스 -->
+  <g color="#2a1424" opacity=".95">
+    <g transform="scale(.8)"><use href="#brachio"/></g>
+    <animateMotion path="M-180 206 L1080 206" dur="45s" begin="-14s" repeatCount="indefinite"/>
+  </g>
+
+  <rect y="250" width="900" height="30" fill="#0d1117" opacity=".6"/>
+
+  <!-- 타이틀 -->
+  <g text-anchor="middle" font-family="Impact, 'Arial Black', 'Helvetica Neue', sans-serif" font-weight="900">
+    <text x="450" y="112" font-size="64" letter-spacing="6" fill="#1a0d0a" opacity=".6" transform="translate(4 5)">JURASSIC GARDEN</text>
+    <text x="450" y="112" font-size="64" letter-spacing="6" fill="url(#gold)" stroke="#3a1a0c" stroke-width="2.5" paint-order="stroke">JURASSIC GARDEN</text>
+  </g>
+  <text x="450" y="152" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="8" fill="#ffe9c4">GARDEN0728</text>
+</svg>
